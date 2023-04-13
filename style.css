@@ -1,142 +1,246 @@
-
-  @import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
-
-  @font-face {
-    font-family: myFont;
-    src: url('font/Far.Afsoon.ttf');
-  }
-  @media (max-width: 767px) {
-    body {
-      width: 100%;
-    }
-  }
-
-.profile{
-  max-width: 840px; 
-    margin: 0 auto; 
-    padding: 0 15px;
+@font-face {
+  font-family: myFont;
+  src: url('font/Far.Afsoon.ttf');
 }
-.profile{ width : min(100% - 30px, 840px); 
-  margin-inline:auto;}
-  .main{
-    max-width: 840px; 
-    margin: 0 auto; 
-    padding: 0 15px;
-  }
-  .main{ width : min(100% - 30px, 840px); 
-    margin-inline:auto;}
-.H-1 { 
-  color: aliceblue;
-    box-shadow: 1, 2, 1 ;
-    direction:ltr;
-    font-size: 26;
-    font-family: 'font/SedgwickAveDisplay-Regular.ttf', cursive;
-    animation: change-color 6s infinite;
-  background: linear-gradient(to right, #41e3ff, #06628d);
-  -webkit-background-clip: text;
-  -webkit-text-fill;
+@font-face {
+  font-family: myfont1;
+  src: url('font/SedgwickAveDisplay-Regular.ttf');
 }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    background: radial-gradient(ellipse at left, #000000 0%, #0a0a0a 100%) center  no-repeat;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.7;
+  background: radial-gradient(ellipse at left, #090909 0%,  #171717 100%) center  no-repeat;
 background-size: cover;
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
 background-attachment: fixed;
-display: flex;
-justify-content: center;
-align-items: center;
-
- text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-}
-.profile img {    
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 3px solid #000;
-    border-color: rgb(175, 175, 175);
-    
-}
-.profile p{
-    text-align: left;
-    float: right;
-    width:135px;
-    height:auto;
-    padding:10px;
-    background-color:rgb(19, 18, 18);
-    color:white;
-    border-radius:20px;
-    margin-right: 500px;
-    font-family: myFont, sans-serif;
-}
-.button-style {
-    text-align: left;
-    float:right;
-    width:70px;
-    height:auto;
-    padding:10px;
-    background-color:rgb(49, 214, 206);
-    border: none;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-    transition: all 0.3s ease;
-    color:rgb(0, 0, 0);
-    border-radius:20px;
-    margin-right: 590px;
-    margin-top: -39px;
-    font-family: myFont, sans-serif;
-  
-  }
-  
-  .button-style:hover {
-    background-color: #000a09;
-    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
-    transform: translateY(-1px);
-    color: aliceblue;
-    font-family: myFont, sans-serif;
-  }
-    
-.main p{
-color: #ffffff;
-font-family: myfont, sans-serif;
-font-size: 36px;
 }
 
-.main img {
-  width: 700px;
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header h1 {
+  float: left;
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+nav ul {
+  float: right;
+  list-style-type: none;
+  margin: 20px 0 0 0;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  color: #333333;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 20px 0 0;
+  text-transform: uppercase;
+}
+
+nav ul li a:hover {
+  color: #333333;
+}
+
+.container h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 30px 0;
+}
+
+.profile {
+  width: 250px;
+  float: left;
+  position: absolute;
+  left: 1;
+}
+
+.profile img {
+  max-width: 100%;
   height: auto;
-border-radius: 10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #3a3a3a;
+  border-color: rgb(175, 175, 175);
+}
 
+.profile p {
+  position: absolute;
+  top: 5px;
+  right: 0px;
+  padding: 10px;
+  background-color: rgb(35, 35, 35);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  border-radius: 10px;
+  font-family: myFont, sans-serif;
+}
+
+.main img{ max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 1px 3px 10px rgb(0 0 0);
+} 
+.profile button {
+  position: absolute;
+  top: 50px;
+  background-color: #03201c;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 10px;
+  font-family: myFont, sans-serif;
+}
+
+.profile button:hover {
+  background-color: #06f3cb;
+  color: #000;
+  font-family: myFont, sans-serif;}
+
+@media (max-width: 768px) {
+  nav {
+    float: none;
+  }
+
+  nav ul {
+    text-align: center;
+  }
+
+  nav ul li {
+    display: block;
+  }
+
+  nav ul li a {
+    display: block;
+    margin: 10px 0;
+  }
+}
+.main .p3{
+  text-align: center;
+  font-family: myfont,sans-serif;
+  font-size: 36px;
+  color: #ffffff;
 }
 #p1{
-  font-size: 15px;
-  font-family: not;
-  color: aliceblue;
-  margin-top: -3px;
-  line-height: 1.5;
+  color: #ffffff;
+  font-size: 14px;
+  text-align: center;
+}
+.main p{
+  color: #ffffff;
+  font-size: 16px;
+  text-align: center;
+  direction: rtl;
  
+
 }
-#p2{
-width: 700px;
+#myVideo{
+  text-align: center;
+
+}
+.main .p4 {
+  text-align: center;
+  font-size: 12px;
+  color: #ffffff;
+}
+.change-background{
+  background-image: linear-gradient(#0c6a5c, #028780);
+  background-size: 100%;
+  background-repeat: repeat;
+  animation: mymove 2s ease-in-out infinite alternate;
+  text-align: center;
+  color: white;
   font-size: 30px;
-  font-family: not;
-  color: #646464;
+  position: relative;
+  font-family: myfont, sans-serif;
+  border-radius: 10px;
+
+}
+@keyframes mymove {
+  from {
+    background-position-x: left;
+    background-position-y: bottom;
+    color: #fff;
+  }
+  to {
+    background-position-x: right;
+    background-position-y: top;
+    color: #000;
+  }
 }
 
-.controls button {
-  font-size: 18px;
-  padding: 10px;
-  border-radius: 5px;
+.image-container {
+  position: relative;
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   color: #fff;
-  cursor: pointer;
-  background-color: #06f;
-  border: none;
-  margin-right: 10px;
+  padding: 10px;
+  font-size: 30px;
+  font-family: myfont,sans-serif;
+  text-shadow: 10px 10px 10px rgb(0, 0, 0);
+}
+.main .b1{
+  animation-name: bax;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  background-image: linear-gradient(#6f717100, #2e2f2f00);
+  border-radius: 10px;
+  display: inline-block;
+  text-align: right;
+  font-size: 18px;
+  color: #ffffff;
+  
+}
+  @keyframes bax {
+    0% {
+      box-shadow: 1px 2px 10px rgb(65, 244, 193);
+    }
+    50% {
+      box-shadow: 4px 8px 20px rgb(65, 208, 244);
+    }
+    100% {
+      box-shadow: 8px 8px 30px rgb(25, 138, 225);
+    }
+}
+.main .H1-13{
+font-family: myfont1, sans-serif;
+color: #fff;
+font-weight: 200;
 }
 
-
-
+.main i{
+  color: #ffffff;
+  font-size: 16px;
+  text-align: center;
+}
